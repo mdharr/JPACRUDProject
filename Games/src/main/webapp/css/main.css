@@ -1,0 +1,81 @@
+body {
+	background-color: #323942;
+	color: #dddddd;
+	font-family: monospace;
+	font-size: 16px;
+	padding: 10px;
+	
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	color: #E3C797;
+}
+
+a:hover {
+	background-color: #E3C797;
+	color: #222222;
+}
+
+a:active {
+	color: #963A2F;
+}
+
+input {
+	background-color: #E3C797;
+	color: #7BA34D;
+
+	width: 150px;
+}
+
+input:focus {
+    outline: none;
+    background-color: #E3C797;
+    color: #7BA34D;
+
+}
+
+input.slide-hover-left-1:hover {
+    background-size: 100%;
+    color: #7BA34D;
+}
+
+input[type=submit] {
+  background-color: transparent;
+  border: 2px solid #E3C797;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+input:hover[type="submit"] {
+	color: white;
+	background-color: #7BA34D;
+	
+	text-transform: capitalize;
+/* 	border: 2px solid #E3C797;
+ */	
+} 
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #7BA34D;
+  color: white;
+  
+}
+
+tr {
+	color: white;
+}
+
+
+
+
+
+
+
+
+
+

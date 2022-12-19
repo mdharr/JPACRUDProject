@@ -8,7 +8,7 @@ public interface GameDAO {
 	
 	Game findById(int gameId);
 	List<Game> findAll();
-	Game create();
+	Game create(Game game);
 	Game update(int gameId, Game game);
 	boolean delete(int gameId);
 
