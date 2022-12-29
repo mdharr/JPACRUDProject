@@ -7,6 +7,7 @@ body {
 	
 }
 
+
 a:link, a:visited {
 	text-decoration: none;
 	color: #E3C797;
@@ -24,8 +25,7 @@ a:active {
 input {
 	background-color: #E3C797;
 	color: #7BA34D;
-
-	width: 150px;
+	
 }
 
 input:focus {
@@ -35,18 +35,12 @@ input:focus {
 
 }
 
-input.slide-hover-left-1:hover {
-    background-size: 100%;
-    color: #7BA34D;
-}
 
 input[type=submit] {
   background-color: transparent;
   border: 2px solid #E3C797;
   color: white;
-  padding: 16px 32px;
   text-decoration: none;
-  margin: 4px 20px;
   cursor: pointer;
   border-radius: 20px;
 }
@@ -54,10 +48,7 @@ input[type=submit] {
 input:hover[type="submit"] {
 	color: white;
 	background-color: #7BA34D;
-	
 	text-transform: capitalize;
-/* 	border: 2px solid #E3C797;
- */	
 } 
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
@@ -69,6 +60,9 @@ input:hover[type="submit"] {
 tr {
 	color: white;
 }
+
+
+
 
 
 

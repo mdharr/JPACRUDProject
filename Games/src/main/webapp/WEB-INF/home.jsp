@@ -15,21 +15,21 @@
 
 <form action="getGame.do" method="GET">
   Find by ID: <input type="text" name="gameId" required/>
-  <input class="btn" type="submit" value="Show Game"/>
+  <input id="btnDisplay" class="btn" type="submit" value="Show Game"/>
 </form>
 
 <form action="delete.do" method="POST">
   Delete by ID: <input type="text" name="gameId" required/>
-  <input class="btn" type="submit" value="Delete Game"/>
+  <input id="btnDelete" class="btn" type="submit" value="Delete Game"/>
 </form>
 
 <form action="editGameById.do" method="GET">
   Update by ID: <input type="text" name="gameId"/>
-  <input class="btn" type="submit" value="Update Game"/>
+  <input id="btnUpdate" class="btn" type="submit" value="Update Game"/>
 </form>
 
 <form action="create.do" method="GET">
-  Create a Game <input class="btn" type="submit" value="Create Game">
+  Create a Game <input id="btnCreate" class="btn" type="submit" value="Create Game">
 </form>
 
 <c:choose>
