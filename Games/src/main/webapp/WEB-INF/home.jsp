@@ -23,7 +23,7 @@
   <input class="btn" type="submit" value="Delete Game"/>
 </form>
 
-<form action="update.do" method="GET">
+<form action="editGameById.do" method="GET">
   Update by ID: <input type="text" name="gameId"/>
   <input class="btn" type="submit" value="Update Game"/>
 </form>

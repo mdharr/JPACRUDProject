@@ -40,9 +40,11 @@ public class GameController {
 	}
 	
 	@RequestMapping("added.do")
-	public String addedGame(@RequestParam("gameId") int gameId, Game game) {
-
-		return "game/added";
+	public ModelAndView addedGame(Game game) {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("game", game);
+		mv.setViewName("game/added");
+		return mv;
 
 	}
 	
@@ -66,26 +68,28 @@ public class GameController {
 	
 	
 	@RequestMapping(path = "editGameById.do", params = "gameId", method = RequestMethod.GET)
-	public ModelAndView editFilmById(@RequestParam("gameId") int gameId) throws SQLException {
+	public String editGameById(Integer gameId, RedirectAttributes redir) throws SQLException {
 		ModelAndView mv = new ModelAndView();
 		Game g = dao.findById(gameId);
+
 		mv.addObject("game", g);
 		
 		mv.setViewName("game/update");
-		return mv;
+		redir.addFlashAttribute("game", g);
+		return "redirect:update.do";
 	}
 
 	@RequestMapping(path = "update.do", method = RequestMethod.POST)
-	public ModelAndView editFilm(@RequestParam("gameId") int gameId, Model model) throws SQLException {
+	public ModelAndView editGame(Game game, Model model) throws SQLException {
+		ModelAndView mv = new ModelAndView();			
+		dao.update(game.getId(), game);
+		System.out.println("game" + game);
 		
-		ModelAndView mv = new ModelAndView();
-		
-		Game game = dao.findById(gameId);
-		
-		dao.update(gameId, game);
-		
+		model.addAttribute("games", dao.findAll());
 		mv.setViewName("home");
+		
 		return mv;
+
 	}
 	
 	@RequestMapping(path = "delete.do", method = RequestMethod.POST)

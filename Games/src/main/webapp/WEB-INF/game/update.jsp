@@ -21,7 +21,7 @@
 <div>
     
     <form action="update.do" method="POST">
-   	<input id="gameId" type="hidden" name="gameId" value="${game.id}"> 
+   	<input id="gameId" type="hidden" name="id" value="${game.id}"> 
    	
    	  <div>
       <label for="title"><strong>Title:</strong></label>
@@ -79,12 +79,12 @@
       
       <div>
       <label for="metascore"><strong>Metascore:</strong></label>
-      <input type="text" name="metascore">
+      <input type="text" name="metascore" required>
       </div>
       
       <div>
       <label for="userScore"><strong>User Score:</strong></label>
-      <input type="text" name="userScore">
+      <input type="text" name="userScore" required>
       </div>
       
       <div>
